@@ -1,0 +1,6 @@
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\InfrustructureInterfaces\bin\Debug\InfrustructureInterfaces.dll
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\InfrustructureInterfaces\bin\Debug\InfrustructureInterfaces.pdb
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\InfrustructureInterfaces\obj\Debug\InfrustructureInterfaces.csprojAssemblyReference.cache
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\InfrustructureInterfaces\obj\Debug\InfrustructureInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\InfrustructureInterfaces\obj\Debug\InfrustructureInterfaces.dll
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\InfrustructureInterfaces\obj\Debug\InfrustructureInterfaces.pdb

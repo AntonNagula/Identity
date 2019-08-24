@@ -1,0 +1,33 @@
+﻿@model  IList<_14._08.Models.AppLesson>
+@{
+    ViewBag.Title = "GetLessons";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div>
+        <h3>Студенты</h3>
+        <table>
+            <tr>
+                <td><p>Id</p></td>
+                <td><p>Название</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in Model)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p>@b.Name</p></td>
+                    <td><p><form method="post" action="/Home/DeleteLesson/@b.Id"><input type="submit" value="Удалить занятие" /></form></p></td>
+                    <td><p><a href="/Home/UpdateLesson/@b.Id">редактировать</a></p></td>
+                </tr>
+            }
+        </table>        
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\bin\Debug\DomainService.dll
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\bin\Debug\DomainService.pdb
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\bin\Debug\DomainInterface.dll
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\bin\Debug\InfrustructureInterfaces.dll
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\bin\Debug\DomainInterface.pdb
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\bin\Debug\InfrustructureInterfaces.pdb
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\obj\Debug\DomainService.csprojAssemblyReference.cache
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\obj\Debug\DomainService.csproj.CoreCompileInputs.cache
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\obj\Debug\DomainService.csproj.CopyComplete
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\obj\Debug\DomainService.dll
+C:\Users\Banderos\Desktop\курсы\14.08\14.08\DomainService\obj\Debug\DomainService.pdb

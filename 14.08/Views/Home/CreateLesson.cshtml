@@ -1,0 +1,14 @@
+﻿@model _14._08.Models.ViewLesson
+@{
+    ViewBag.Title = "CreateLesson";
+}
+@using (Html.BeginForm("CreateLesson", "Home", FormMethod.Post))
+{
+<fieldset>
+    @ViewBag.StudentId
+    <p>Введите название предмета: </p>
+    <p><input type="text" name="Name" /> </p>
+    <input type="hidden" value="@ViewBag.StudentId" name="StudentNumber" />
+    <p><input type="submit" value="Отправить" /></p>
+</fieldset>
+}

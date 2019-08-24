@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Редактировать студента";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model _14._08.Models.AppStudent
+<h2>Студент № @Model.Id</h2>
+@using (Html.BeginForm("UpdateStudent", "Home", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.Name, "Имя")
+            <br />
+            @Html.EditorFor(m => m.Name)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Surname, "Фамилия")
+            <br />
+            @Html.EditorFor(m => m.Surname)
+
+        </p>        
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}

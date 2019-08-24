@@ -1,0 +1,39 @@
+﻿@model  IEnumerable<_14._08.Models.AppStudent>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+</head>
+<body>
+    <div>
+        <h3>Студенты</h3>
+        <table>
+            <tr>
+                <td><p>Id</p></td>
+                <td><p>Имя</p></td>
+                <td><p>Фамилия</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in Model)
+            {
+                <tr>
+                    <td><p>@b.Id</p></td>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Surname</p></td>
+                    <td><p><a href="/Home/GetLessons/@b.Id">Просмотр занятий</a></p></td>
+                    <td><p><a href="/Home/UpdateStudent/@b.Id">Редактировать</a></p></td>
+                    <td><p><form method="post" action="/Home/DeleteStudent/@b.Id"><input type="submit" value="удалить студента" /></form></p></td>
+                    <td><p><a href="/Home/CreateLesson/@b.Id">Добавить занятие</a></p></td>
+                </tr>
+            }
+        </table>
+        <form method="get" action="/Home/CreateStudent"><input type="submit" value="Создать студента" /></form>
+    </div>
+</body>
+</html>
