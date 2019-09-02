@@ -272,6 +272,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Filters\CustomAuthAttribute.cs" />
+    <Compile Include="Filters\ModeratorAttribute.cs" />
+    <Compile Include="Filters\UserAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

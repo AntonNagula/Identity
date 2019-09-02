@@ -9,7 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using _14._08.Models;
-
+using DomainInterface.Interfaces;
+using _14._08.Mappers;
 namespace _14._08.Controllers
 {
     [Authorize]
@@ -17,15 +18,17 @@ namespace _14._08.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
-        public AccountController()
+        IService Service;
+        public AccountController(IService service)
         {
+            Service = service;
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IService service)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            Service = service;
         }
 
         public ApplicationSignInManager SignInManager
@@ -157,7 +160,8 @@ namespace _14._08.Controllers
                 {
                     await UserManager.AddToRoleAsync(user.Id, "user");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    AppStudent st = new AppStudent { Name = model.Email };
+                    Service.CreateStudent(st.FromAppStudentToDomainStudent());
                     // Дополнительные сведения о включении подтверждения учетной записи и сброса пароля см. на странице https://go.microsoft.com/fwlink/?LinkID=320771.
                     // Отправка сообщения электронной почты с этой ссылкой
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

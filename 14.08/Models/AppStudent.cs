@@ -9,7 +9,6 @@ namespace _14._08.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Surname { get; set; }
         public ICollection<AppLesson> Lessons { get; set; }
         public AppStudent()
         {

@@ -39,6 +39,11 @@ namespace DomainService.Services
             return _studentRepository.Students.Get(id).FromRepoStudentToDomainStudent();
         }
 
+        public DomainStudent GetStudent(string name)
+        {
+            return _studentRepository.Students.GetAll().FirstOrDefault(x=>x.Name==name).FromRepoStudentToDomainStudent();
+        }
+
         public void UpdateStudent(DomainStudent Student)
         {
             _studentRepository.Students.Update(Student.FromDomainStudentToRepoStudent());
@@ -69,6 +74,7 @@ namespace DomainService.Services
         {
             return _studentRepository.Lessons.GetObjects(StudentId).Select(x => x.FromRepoLessonToDomainLesson()).ToList();
         }
+
         public DomainLesson GetLesson(int id)
         {
             return _studentRepository.Lessons.Get(id).FromRepoLessonToDomainLesson();

@@ -37,7 +37,6 @@ namespace DomainService.Mappers
             {
                 Id = item.Id,
                 Name = item.Name,
-                Surname = item.Surname,
             };
         }
 
@@ -47,7 +46,6 @@ namespace DomainService.Mappers
             {
                 Id = item.Id,
                 Name = item.Name,
-                Surname = item.Surname,
             };
         }
     }

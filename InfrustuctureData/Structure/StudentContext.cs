@@ -34,19 +34,16 @@ namespace InfrustuctureData.Structure
             modelBuilder.ApplyConfiguration(new LessonConfiguration());
             modelBuilder.Entity<DataStudent>().HasData(
             new DataStudent[]
-            {
-                new DataStudent { Id=1, Name="Антон", Surname="Нагула"},
-                new DataStudent { Id=2, Name="Александр", Surname="Котковец"},
-                new DataStudent { Id=3, Name="Макар", Surname="Шпаковский"}
+            {                
+                new DataStudent { Id=1, Name="somemail@mail.ru"},
+             
             });
 
             modelBuilder.Entity<DataLesson>().HasData(
             new DataLesson[]
             {
                 new DataLesson { Id=1, Name="Математика", StudentNumber=1},
-                new DataLesson { Id=2, Name="Физика", StudentNumber=2},
-                new DataLesson { Id=3, Name="Русский", StudentNumber=3},
-                new DataLesson { Id=4, Name="Белорусский", StudentNumber=1}
+                new DataLesson { Id=2, Name="Физика", StudentNumber=1},                
             });
             base.OnModelCreating(modelBuilder);
         }

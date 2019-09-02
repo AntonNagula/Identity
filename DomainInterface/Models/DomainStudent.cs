@@ -10,7 +10,6 @@ namespace DomainInterface.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Surname { get; set; }
         public ICollection<DomainLesson> Lessons { get; set; }
         public DomainStudent()
         {

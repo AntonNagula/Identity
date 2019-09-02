@@ -51,7 +51,6 @@ namespace InfrustuctureData.Repositories
         {
             DataStudent student = db.Students.Find(item.Id);
             student.Name = item.Name;
-            student.Surname = item.Surname;
             db.Entry(student).State = EntityState.Modified;            
             db.SaveChanges();
         }

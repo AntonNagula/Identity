@@ -13,6 +13,7 @@ namespace DomainInterface.Interfaces
         void CreateStudent(DomainStudent Item);
         void Delete_Student(int Id);
         DomainStudent GetStudent(int id);
+        DomainStudent GetStudent(string name);
         void UpdateStudent(DomainStudent Student);
 
         void Create_Lesson(DomainLesson item);

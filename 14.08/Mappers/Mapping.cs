@@ -45,7 +45,6 @@ namespace _14._08.Mappers
             {
                 Id = item.Id,
                 Name = item.Name,
-                Surname = item.Surname,
             };
         }
 
@@ -55,7 +54,6 @@ namespace _14._08.Mappers
             {
                 Id = item.Id,
                 Name = item.Name,
-                Surname = item.Surname,
             };
         }
     }

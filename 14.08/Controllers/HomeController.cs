@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace _14._08.Controllers
 {
-    [Authorize(Roles = "admin,user")]
+    [Authorize(Roles = "admin,user,moderator")]
     public class HomeController : Controller
     {
         public readonly IService service;
@@ -21,8 +21,17 @@ namespace _14._08.Controllers
         }
 
         public ActionResult Index()
-        {            
-            return View(service.GetStudents().Select(x=>x.FromDomainStudentToAppStudent()).ToList());
+        {
+            bool flag=HttpContext.User.IsInRole("user");
+            if(flag==true)
+            {
+                AppStudent student = service.GetStudent(HttpContext.User.Identity.Name).FromDomainStudentToAppStudent();
+                List<AppStudent> st=new List<AppStudent>();
+                st.Add(student);
+                return View(st);
+            }
+            else
+                return View(service.GetStudents().Select(x => x.FromDomainStudentToAppStudent()).ToList());
         }
 
         public ActionResult GetLessons(int id)
@@ -63,14 +72,14 @@ namespace _14._08.Controllers
             return View("Contact");
         }
 
-        [HttpGet, CustomAuth]
+        [HttpGet, User]
         public ActionResult UpdateLesson(int id)
         {
             AppLesson lesson = service.GetLesson(id).FromDomainLessonToAppLesson();
             return View(lesson);
         }
 
-        [HttpPost, CustomAuth]
+        [HttpPost, User]
         public ActionResult UpdateLesson(AppLesson value)
         {
             service.UpdateLesson(value.FromAppLessonToDomainLesson());
@@ -78,21 +87,21 @@ namespace _14._08.Controllers
         }
 
 
-        [HttpPost, CustomAuth]
+        [HttpPost, Authorize(Roles = "admin,user")]
         public ActionResult DeleteLesson(int id)
         {
             service.Delete_Lesson(id);
             return View("Contact");
         }
 
-        [HttpGet, CustomAuth]
+        [HttpGet, User]
         public ActionResult CreateLesson(int id)
         {
             ViewBag.StudentId = id;
             return View();
         }
 
-        [HttpPost, CustomAuth]
+        [HttpPost, User]
         public ActionResult CreateLesson(ViewLesson lesson)
         {
             service.Create_Lesson(lesson.FromViewLessonToDomainLesson());

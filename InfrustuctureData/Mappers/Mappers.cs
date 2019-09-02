@@ -30,8 +30,7 @@ namespace InfrustuctureData.Mappers
             return new DataStudent
             {
                 Id = item.Id,
-                Name = item.Name,
-                Surname = item.Surname,                                
+                Name = item.Name,                          
             };
         }
 
@@ -41,7 +40,6 @@ namespace InfrustuctureData.Mappers
             {
                 Id = item.Id,
                 Name = item.Name,
-                Surname = item.Surname,
             };
         }
     }
