@@ -22,15 +22,16 @@
             </tr>
             @foreach (var b in Model)
             {
-                <tr>
-                    <td><p>@b.Id</p></td>
-                    <td><p>@b.Name</p></td>
-                    <td><p><a href="/Home/GetLessons/@b.Id">Просмотр занятий</a></p></td>
-                    <td><p><a href="/Home/CreateLesson/@b.Id">Добавить занятие</a></p></td>
-                </tr>
+            <tr>
+                <td><p>@b.Id</p></td>
+                <td><p>@b.Name</p></td>
+                <td><p><a href="/Home/GetLessons/@b.Id">Просмотр занятий</a></p></td>
+                <td><p><a href="/Home/CreateLesson/@b.Id">Добавить занятие</a></p></td>
+               
+            </tr>
             }
         </table>
-        <form method="get" action="/Home/CreateStudent"><input type="submit" value="Создать студента" /></form>
+       
     </div>
 </body>
 </html>

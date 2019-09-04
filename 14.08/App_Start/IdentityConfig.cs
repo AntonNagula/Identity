@@ -64,6 +64,8 @@ namespace _14._08
             manager.UserLockoutEnabledByDefault = true;
             manager.DefaultAccountLockoutTimeSpan = TimeSpan.FromMinutes(5);
             manager.MaxFailedAccessAttemptsBeforeLockout = 5;
+            //manager.UserLockoutEnabledByDefault = true;
+            //manager.DefaultAccountLockoutTimeSpan = DateTime.Now.AddYears(100).TimeOfDay;
 
             // Регистрация поставщиков двухфакторной проверки подлинности. Для получения кода проверки пользователя в данном приложении используется телефон и сообщения электронной почты
             // Здесь можно указать собственный поставщик и подключить его.

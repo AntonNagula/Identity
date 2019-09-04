@@ -2,12 +2,11 @@
 using _14._08.Models;
 using DomainInterface.Interfaces;
 using _14._08.Mappers;
-using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using _14._08.Controllers;
 
 namespace _14._08.Controllers
 {
@@ -19,6 +18,8 @@ namespace _14._08.Controllers
         {
             service = s;
         }
+
+        
 
         public ActionResult Index()
         {
@@ -41,8 +42,7 @@ namespace _14._08.Controllers
         }
         [HttpPost, CustomAuth]
         public ActionResult DeleteStudent(int id)
-        {
-            service.Delete_Student(id);
+        {            
             return View("Contact");
         }
 

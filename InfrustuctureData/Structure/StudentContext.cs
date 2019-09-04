@@ -36,14 +36,16 @@ namespace InfrustuctureData.Structure
             new DataStudent[]
             {                
                 new DataStudent { Id=1, Name="somemail@mail.ru"},
-             
+                new DataStudent { Id=2, Name="mail@mail.ru"},
             });
 
             modelBuilder.Entity<DataLesson>().HasData(
             new DataLesson[]
             {
                 new DataLesson { Id=1, Name="Математика", StudentNumber=1},
-                new DataLesson { Id=2, Name="Физика", StudentNumber=1},                
+                new DataLesson { Id=2, Name="Физика", StudentNumber=1},
+                new DataLesson { Id=3, Name="Физика", StudentNumber=2},
+                new DataLesson { Id=4, Name="Химия", StudentNumber=2},
             });
             base.OnModelCreating(modelBuilder);
         }

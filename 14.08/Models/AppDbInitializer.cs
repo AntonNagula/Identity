@@ -60,6 +60,19 @@ namespace _14._08.Models
                 // добавляем для пользователя роль
                 userManager.AddToRole(admin3.Id, role3.Name);
             }
+
+
+
+            var admin4 = new ApplicationUser { Email = "mail@mail.ru", UserName = "mail@mail.ru" };
+            string password4 = "4444_ABcd";
+            var result4 = userManager.Create(admin4, password4);
+
+            // если создание пользователя прошло успешно
+            if (result4.Succeeded)
+            {
+                // добавляем для пользователя роль
+                userManager.AddToRole(admin4.Id, role2.Name);
+            }
             base.Seed(context);
         }
     }
